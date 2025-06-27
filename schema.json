@@ -9,7 +9,7 @@
     },
     "orcid": {
       "type": "string",
-      "description": "Your ORCiD URL if available."
+      "description": "Your ORCiD URL, if available."
     },
     "image": {
       "type": "string",
