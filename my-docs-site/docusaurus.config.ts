@@ -2,29 +2,11 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
 const config: Config = {
   title: 'Test Schema v1.0.0',
   tagline: 'Powered by Docusaurus',
   favicon: 'img/favicon.ico',
   themes: ["docusaurus-json-schema-plugin"],
-
-  plugins: [
-   [
-    'docusaurus-json-schema-plugin',
-    {
-      id: 'schema',
-      path: '../',            // Folder where your JSON Schemas are stored
-      routeBasePath: 'schemas',     // URL path where they will be hosted
-    },
-   ],
-  ],
-
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
-  future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
-  },
 
   // Set the production url of your site here
   url: 'https://ThomasJejkal.github.io',
@@ -34,9 +16,26 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'ThomasJejkal', // Usually your GitHub org/user name.
+  organizationName: 'thomasjejkal', // Usually your GitHub org/user name.
   projectName: 'schema-test', // Usually your repo name.
   deploymentBranch: 'gh-pages',
+
+  plugins: [
+   [
+    'docusaurus-json-schema-plugin',
+    {
+      id: 'schema',
+      path: '../',            // Folder where your JSON Schemas are stored
+      routeBasePath: 'schemas',     // URL path where they will be hosted
+    },
+   ]
+  ],
+
+  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
+  future: {
+    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+  },
+
   trailingSlash: false,
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -53,10 +52,8 @@ const config: Config = {
     [
       'classic',
       {
-        docs: {
-          routeBasePath: '/',
-        },
-        blog: false, 
+        docs: false,
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },

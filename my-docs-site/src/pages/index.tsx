@@ -6,7 +6,6 @@ import Heading from '@theme/Heading';
 import CodeBlock from '@theme/CodeBlock';
 import Schema from "../../../schema.json";
 import JSONSchemaViewer from "@theme/JSONSchemaViewer";
-
 import styles from './index.module.css';
 
 function HomepageHeader() {
@@ -15,9 +14,9 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          {siteConfig.title}
+          Test Schema v1.0.0
         </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className="hero__subtitle">Powered by Docusaurus</p>
       </div>
     </header>
   );
@@ -27,8 +26,8 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={'Test Schema v1.0.0'}
+      description="Auto-generated schema documentation page.">
       <HomepageHeader />
       <main>
           <JSONSchemaViewer schema={ Schema } />

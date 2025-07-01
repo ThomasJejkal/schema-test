@@ -6,25 +6,40 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #1f2328;
+  --ifm-alert-foreground-color: #1f2328;
+  --ifm-color-primary-dark: #171b1f;
+  --ifm-color-primary-darker: #0f1317;
+  --ifm-color-primary-darkest: #0a0c0e;
+  --ifm-color-primary-light: #2c3138;
+  --ifm-color-info-dark: #2c3138;
+  --ifm-color-primary-lighter: #444a51;
+  --ifm-color-primary-lightest: #60666d;
+
+  --ifm-background-color: #ffffff;
+  --ifm-color-info-contrast-background: #ffffff;
+  --ifm-navbar-background-color: #f6f8fa;
+  --ifm-footer-background-color: #f6f8fa;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.05);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #c9d1d9;
+  --ifm-alert-foreground-color: #c9d1d9;;
+  --ifm-color-primary-dark: #b1b8be;
+  --ifm-color-primary-darker: #9aa1a7;
+  --ifm-color-primary-darkest: #7a8187;
+  --ifm-color-primary-light: #d7dde3;
+  --ifm-color-info-dark: #d7dde3;
+  --ifm-color-primary-lighter: #e6ebf0;
+  --ifm-color-primary-lightest: #f0f3f6;
+
+  --ifm-background-color: #0d1117;
+  --ifm-color-info-contrast-background: #0d1117;
+  --ifm-navbar-background-color: #161b22;
+  --ifm-footer-background-color: #161b22;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.05);
 }
