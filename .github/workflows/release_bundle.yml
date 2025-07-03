@@ -8,13 +8,11 @@ jobs:
   on-release-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout repo
         uses: actions/checkout@v4
-
-      - name: Print release info
-        run: |
-          echo "Release tag: ${{ github.event.release.tag_name }}"
-          echo "Release name: ${{ github.event.release.name }}"
-          echo "Published by: ${{ github.actor }}"
-          echo "Published by: ${{ github.event.release.upload_url }}"
+      - name: JSON Schema Check
+        uses: kit-data-manager/json-schema-check-action@v0.0.2
+        with:
+          schemaPath: 'schema.json'
+          token: ${{ secrets.GITHUB_TOKEN }}
           
