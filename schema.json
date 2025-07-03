@@ -5,7 +5,7 @@
   "properties": {
     "name": {
       "type": "string",
-      "description": "Name of the user."
+      "description": "Name of the user in the format firstname, lastname."
     },
     "orcid": {
       "type": "string",
