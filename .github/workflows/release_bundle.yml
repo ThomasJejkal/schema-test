@@ -11,7 +11,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
       - name: JSON Schema Check
-        uses: kit-data-manager/json-schema-check-action@v0.0.3
+        uses: kit-data-manager/json-schema-check-action@v0.0.4
         with:
           schemaPath: 'schema.json'
           token: ${{ secrets.GITHUB_TOKEN }}
