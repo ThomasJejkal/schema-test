@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: [main]
 jobs:
-  build:
+  schema1_check:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
@@ -13,6 +13,19 @@ jobs:
         uses: kit-data-manager/json-schema-check-action@v0.0.4
         with:
           schemaPath: 'schema.json'
+          schemaVersion: 'draft-07'
+          validate: true
+          createDiff: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+  schema2_check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: JSON Schema Check
+        uses: kit-data-manager/json-schema-check-action@v0.0.4
+        with:
+          schemaPath: 'another_schema.json'
           schemaVersion: 'draft-07'
           validate: true
           createDiff: true

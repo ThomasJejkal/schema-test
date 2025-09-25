@@ -4,8 +4,7 @@
   "type": "object",
   "properties": {
     "name": {
-      "type": "string",
-      "description": "Name of the user."
+      "$ref": "./name_definition.json"
     },
     "orcid": {
       "type": "string",

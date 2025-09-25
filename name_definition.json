@@ -1,0 +1,5 @@
+{
+  "$id": "name_definition.json",
+  "type": "string",
+  "description": "Name of the user."
+}

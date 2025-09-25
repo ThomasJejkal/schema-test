@@ -1,0 +1,14 @@
+{
+  "title": "My Schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "$ref": "./name_definition.json"
+    },
+    "favourite food": {
+      "type": "string",
+      "description": "Your option of choice in regards to acquiring calories."
+    }
+  },
+  "required": ["name"]
+}

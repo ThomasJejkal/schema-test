@@ -2,7 +2,7 @@ name: Run on New Release
 
 on:
   release:
-    types: [published]  # Triggers only when a release is published
+    types: [published]
 
 jobs:
   on-release-job:
@@ -10,9 +10,16 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+
+      - name: Extract schema name from tag
+        id: extract
+        run: |
+          TAG_NAME="${{ github.event.release.tag_name }}"
+          SCHEMA_NAME=$(echo "$TAG_NAME" | cut -d'-' -f1)
+          echo "schema_name=$SCHEMA_NAME" >> $GITHUB_OUTPUT
+
       - name: JSON Schema Check
         uses: kit-data-manager/json-schema-check-action@v0.0.4
         with:
-          schemaPath: 'schema.json'
+          schemaPath: "${{ steps.extract.outputs.schema_name }}.json"
           token: ${{ secrets.GITHUB_TOKEN }}
-          
