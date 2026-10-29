@@ -19,7 +19,7 @@
       "type": "string",
       "description": "A short title of your feedback (8 - 64 characters) used for result rendering.",
       "minLength": 8,
-      "maxLength": 64
+      "maxLength": 32
     },
     "rating": {
       "type": "integer",
